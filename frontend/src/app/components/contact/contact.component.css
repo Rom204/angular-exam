@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    background: gray;
+    padding: 2rem;
+    border-radius: 10px;
+}

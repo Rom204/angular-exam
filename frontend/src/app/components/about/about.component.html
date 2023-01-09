@@ -1,0 +1,23 @@
+<p>all tasks</p>
+
+
+<table >
+    <thead>
+        <tr>
+            <th>task id</th>
+            <th>task information</th>
+            <th>task created at: </th>
+            <th>task owner</th>
+            <th>status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of myProds" style="border: black solid 1px;">
+            <td>{{item.id}}</td>
+            <td>{{item.info}}</td>
+            <td>{{item.created_at}}</td>
+            <td>{{ item.customer_id }}</td>
+            <td>{{ item.status }}</td>
+        </tr>
+    </tbody>
+</table>

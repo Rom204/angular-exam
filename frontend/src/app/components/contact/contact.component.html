@@ -1,0 +1,34 @@
+<p>add task</p>
+
+<!-- new product form  -->
+<div class="container">
+	<label>
+		information:
+		<input
+			formControlName="info"
+			#info />
+	</label>
+	<br />
+	<label>
+		created at:
+		<input
+			type="date"
+			formControlName="created_at"
+			#created_at />
+	</label>
+	<br />
+	<label>
+		customer name:
+		<select #customer_id>
+			<option
+				*ngFor="let item of customers"
+				value="{{ item.id }}"
+				formControlName="customer_id">
+				{{ item.name }}
+			</option>
+		</select>
+	</label>
+	<br />
+
+	<button (click)="onSubmit(info.value, created_at.value, customer_id.value)">new product</button>
+</div>
